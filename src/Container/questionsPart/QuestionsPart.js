@@ -63,23 +63,24 @@ function QuestionsPart(props) {
   };
   console.log("currQuestion " +currQuestion);
 
-  const handleContainerOnBottom = () => {
-    setIsAnswerd(true);
-  };
-
-  // const onScroll = (e) => {
-  //   console.log("bip1");
-  //   // }
-  //   // if (scrollRef.current) {
-  //   //   const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
-  //   //   console.log(" scrollHeight-scrollTop "+ (scrollHeight-scrollTop));
-  //   //   console.log("scrollHeight " + scrollHeight);
-  //   //   if (clientHeight === scrollHeight-scrollTop) {
-  //   //     console.log("bip");
-  //   //     setIsAnswerd(true);
-  //   //   }
-  //   // }
+  // const handleContainerOnBottom = () => {
+  //   setIsAnswerd(true);
   // };
+  
+  const onScroll = (e) => {
+      setIsAnswerd(true);
+    console.log("bip1");
+    // }
+    // if (scrollRef.current) {
+    //   const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
+    //   console.log(" scrollHeight-scrollTop "+ (scrollHeight-scrollTop));
+    //   console.log("scrollHeight " + scrollHeight);
+    //   if (clientHeight === scrollHeight-scrollTop) {
+    //     console.log("bip");
+    //     setIsAnswerd(true);
+    //   }
+    // }
+  };
 
   return (
     <div className="questions-part">
@@ -102,7 +103,7 @@ function QuestionsPart(props) {
               //   {(scrollRef) => (
                   <div
                     className="text-speech normal-text quote"
-                    // onScroll={onScroll}
+                    onScroll={onScroll}
                     ref={scrollRef}
                   >
                     <Markup
