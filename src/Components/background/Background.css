@@ -1,0 +1,92 @@
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* top: -16%;
+    left: -56%; */
+  /* background: rgb(228,243,253); */
+  background: linear-gradient(
+    137deg,
+    rgba(228, 243, 253, 1) 0%,
+    rgba(224, 241, 252, 1) 21%,
+    rgba(74, 179, 216, 1) 100%
+  );
+}
+.background-bals {
+  position: absolute;
+  height: 141%;
+  top: -16%;
+  left: -56%;
+}
+
+.cls-1 {
+  isolation: isolate;
+}
+/* .cls-2 {
+  fill: url(#New_Gradient_Swatch_copy_6);
+} */
+.bal1 {
+  fill: url(#linear-gradient);
+  animation: move2 120s 0.25s linear infinite;
+}
+.bal3 {
+    fill: url(#linear-gradient-2);
+    animation: move2 120s 0.25s linear infinite;
+}
+.bal2 {
+    fill: url(#linear-gradient-3);
+    animation: move1 120s 0.25s linear infinite;
+}
+/* .cls-6 {
+  fill: url(#New_Gradient_Swatch_copy_6-2);
+} */
+.bal-glow {
+  mix-blend-mode: multiply;
+}
+
+@keyframes move1 {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes move2 {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+.glass {
+  width: 88%;
+  height: 94%;
+  position: absolute;
+  /* background: rgba(255, 255, 255, 0.25); */
+  /* background: linear-gradient(
+    137deg,
+    rgba(227, 242, 253, 0.31) 0%,
+    rgba(111, 195, 225, 0.31) 100%
+  ); */
+  background: linear-gradient(
+    137deg,
+    rgb(227 242 253 / 31%) 0%,
+    rgb(223 240 252 / 31%) 14%,
+    rgb(107 193 224 / 31%) 100%
+  ); /* linear-gradient(137deg, rgb(227 242 253) 0%, rgb(119 198 227) 100%) */
+  border-radius: 16px;
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+}

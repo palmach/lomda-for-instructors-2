@@ -1,38 +1,122 @@
+@font-face {
+  font-family: bigHeadlineFont;
+  src: url(fonts/Karantina-Bold.ttf);
+  /* src: url(fonts/HammerProGX.ttf); */
+}
+@font-face {
+  font-family: bigSmallHeadlineFont;
+  /* src: url(fonts/Karantina-Light.ttf); */
+  src: url(fonts/Karantina-Regular.ttf);
+  /* src: url(fonts/HammerProGX.ttf); */
+}
+@font-face {
+  font-family: smallHeadlineFont;
+  src: url(fonts/HammerProGX.ttf);
+}
+@font-face {
+  font-family: textFont;
+  src: url(fonts/FbSpoiler-Regular.otf);
+}
+
+* {
+  color: #070542;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 0.4em;
+  
+}
+::-webkit-scrollbar-track {
+  background: rgb(239 239 239 / 45%);
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 0.6em;
+}
+
+::selection{
+  background-color: #302adb6b;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* text-align: center; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  direction: rtl;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.big-headline {
+  /* font-family: HeadlineFont; */
+  font-family: bigHeadlineFont;
+  font-size: 20vw;
+  font-weight: bolder;
+  margin: 2vh;
+}
+.big-small-headline {
+  /* font-family: HeadlineFont; */
+  font-family: bigSmallHeadlineFont;
+  font-size: 13vw;
+  margin: 2vh;
+}
+.small-headline {
+  /* font-family: HeadlineFont; */
+  font-family: smallHeadlineFont;
+  font-size: 10vw;
+  margin: 2vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.normal-text {
+  font-family: textFont;
+  font-size: 10.5vw;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.small-margin {
+  margin: 1vh;
+}
+
+.btn {
+  background-color: #ffffffa6;
+  border-radius: 0.8em;
+  font-family: textFont;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 8.5vw;
+  padding: 1.5vh 8.5vw;
+  margin: 1vh;
+  font-weight: bolder;
+}
+
+.sound-icon {
+  margin: 2.5vw;
+  height: 8vh;
+  width: 18vw;
+}
+
+.page {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
