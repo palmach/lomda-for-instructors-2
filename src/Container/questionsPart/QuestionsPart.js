@@ -24,7 +24,7 @@ function QuestionsPart(props) {
   }, [rndQuestion])
 
   
-  const scrollRef=useRef()
+
   const navigate = useNavigate();
 
   console.log(rndQuestion);
@@ -98,8 +98,8 @@ function QuestionsPart(props) {
           </h1>
           {questionCaunter === 1 ? (
             clickCaunter === 0 ? (
-              // <BottomScrollListener onBottom={handleContainerOnBottom}>
-                // {(scrollRef) => (
+              <BottomScrollListener onBottom={handleContainerOnBottom}>
+                {(scrollRef) => (
                   <div
                     className="text-speech normal-text quote"
                     // onScroll={onScroll}
@@ -110,8 +110,8 @@ function QuestionsPart(props) {
                       content={Text[props.pageNum]["speech"]}
                     />
                   </div>
-                // )}
-              // </BottomScrollListener>
+                )}
+              </BottomScrollListener>
             ) : (
               clickCaunter === 1 && (
                 <div className="questions-part">
