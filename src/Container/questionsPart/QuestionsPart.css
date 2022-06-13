@@ -1,5 +1,6 @@
 .questions-part {
   overflow: hidden;
+  overflow-y: auto;
   text-align: center;
   display: flex;
   align-items: center;
