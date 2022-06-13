@@ -25,6 +25,8 @@
 ::-webkit-scrollbar {
   width: 12px;
   border-radius: 0.4em;
+  min-width: 11px;
+  min-height: fit-content;
   
 }
 ::-webkit-scrollbar-track {
