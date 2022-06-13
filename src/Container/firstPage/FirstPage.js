@@ -17,13 +17,13 @@ function FirstPage(props) {
   }, []);
 
   return (
-    <div className="first-page page">
+    <div className=" page">
       <div className="logos-cont">
         <div className="logo1 logo"></div>
         <div className="logo2 logo"></div>
       </div>
       {props.pageNum === 0 ? (
-        <div className="page">
+        <div className="page first-page">
           <p className="big-headline">זהות ותודעה יהודית בצה"ל</p>
           <p className="big-small-headline">
             תדרוך ודגשים מרכזיים למדריכים ומרצים
