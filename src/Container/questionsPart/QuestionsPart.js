@@ -119,7 +119,7 @@ function QuestionsPart(props) {
               </div>
             ) : (
               clickCaunter === 1 && (
-                <div className="questions-part">
+                <div className="questions-part make-scroll">
                   <h1 className="question-text">
                     {Text[props.pageNum]["mult-question"]}
                   </h1>
