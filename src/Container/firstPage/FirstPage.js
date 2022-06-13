@@ -23,7 +23,7 @@ function FirstPage(props) {
         <div className="logo2 logo"></div>
       </div>
       {props.pageNum === 0 ? (
-        <div className="page first-page">
+        <div className="page margin-logo">
           <p className="big-headline">זהות ותודעה יהודית בצה"ל</p>
           <p className="big-small-headline">
             תדרוך ודגשים מרכזיים למדריכים ומרצים

@@ -56,11 +56,14 @@ function QuestionsPart(props) {
     setClickCaunter((prev) => prev + 1);
     if (questionCaunter <= 2) {
       if (isAnswerd) {
-        if (questionCaunter >= 1) {
+        if (clickCaunter > 1) {
+          console.log("from if");
+          setIsAnswerd(false);
           setQuestionCaunter((prev) => prev + 1);
           setCurrQuestion(rndQuestion[questionCaunter - 1]);
-        } else {
-          setIsAnswerd(false);
+        } else if (clickCaunter === 1){
+          setIsAnswerd(true);
+          console.log("from else");
         }
       }
     } else {
@@ -74,8 +77,8 @@ function QuestionsPart(props) {
   // };
 
   const onScroll = (e) => {
-    setIsAnswerd(true);
-    console.log("bip1");
+    // setIsAnswerd(true);
+    // console.log("bip1");
     // }
     // if (scrollRef.current) {
     //   const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
@@ -175,14 +178,16 @@ function QuestionsPart(props) {
             </div>
             // <FrueFalseQuestions questionNum={questionNum} rndQuestion={rndQuestion} handleClick={handleClick} />
           )}
-          {isAnswerd && questionCaunter > 1 && (
+          {isAnswerd &&
+          //  questionCaunter >= 1 &&
+            (
             <div className=" after-question ">
-              {/* {questionCaunter > 1 && ( */}
+              {questionCaunter > 1 && (
                 <p className="explain-text">
                   {Text[props.pageNum]["explains"][currQuestion]}
                   {/* {Text[props.pageNum]["explains"][currQuestion]} */}
                 </p>
-              {/* )} */}
+               )} 
               <div className="btn question-btn" onClick={handleClick}>
                 הבא
               </div>

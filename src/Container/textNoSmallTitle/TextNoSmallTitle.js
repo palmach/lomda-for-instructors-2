@@ -24,11 +24,11 @@ function TextNoSmallTitle(props) {
   };
 
   return (
-    <div className="text-no-small-title page">
+    <div className="text-no-small-title page ">
      
         {/* <div className="page"> */}
           {Text[props.pageNum]["pic"] === "y" && (
-            <div className="sound-icon">
+            <div className="sound-icon margin-logo">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 103.85 74.46"
