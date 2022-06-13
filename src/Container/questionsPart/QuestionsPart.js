@@ -1,4 +1,10 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import "./QuestionsPart.css";
 import { useNavigate } from "react-router-dom";
 import FrueFalseQuestions from "./../../Components/trueFalseQuestions/FrueFalseQuestions";
@@ -13,7 +19,7 @@ import Text from "./../../Text.json";
 function QuestionsPart(props) {
   const [questionNum, setQuestionNum] = useState(0);
   const [questionCaunter, setQuestionCaunter] = useState(1);
-  
+
   const [rndQuestion, setRndQuestion] = useState([]);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [clickCaunter, setClickCaunter] = useState(0);
@@ -21,9 +27,9 @@ function QuestionsPart(props) {
 
   const questions = useMemo(() => {
     setRndQuestion(props.createRndNum(rndQuestion));
-  }, [rndQuestion])
+  }, [rndQuestion]);
 
-  const scrollRef=useRef();
+  const scrollRef = useRef();
 
   const navigate = useNavigate();
 
@@ -61,14 +67,14 @@ function QuestionsPart(props) {
       navigate("/dear-instructors");
     }
   };
-  console.log("currQuestion " +currQuestion);
+  console.log("currQuestion " + currQuestion);
 
   // const handleContainerOnBottom = () => {
   //   setIsAnswerd(true);
   // };
-  
+
   const onScroll = (e) => {
-      setIsAnswerd(true);
+    setIsAnswerd(true);
     console.log("bip1");
     // }
     // if (scrollRef.current) {
@@ -101,19 +107,22 @@ function QuestionsPart(props) {
             clickCaunter === 0 ? (
               // <BottomScrollListener onBottom={handleContainerOnBottom}>
               //   {(scrollRef) => (
-                  <div
-                    className="text-speech normal-text quote"
-                    onScroll={onScroll}
-                    ref={scrollRef}
-                  >
-                    <Markup
-                      className="text-speech normal-text quote"
-                      content={Text[props.pageNum]["speech"]}
-                    />
-                  </div>
+              <div
+                className="text-speech normal-text quote"
+                onScroll={onScroll}
+                ref={scrollRef}
+              >
+                <Markup
+                  className="text-speech normal-text quote"
+                  content={Text[props.pageNum]["speech"]}
+                />
+                <div className="btn question-btn" onClick={handleClick}>
+                  הבא
+                </div>
+              </div>
+            ) : (
               //   )}
               // </BottomScrollListener>
-            ) : (
               clickCaunter === 1 && (
                 <div className="questions-part">
                   <h1 className="question-text">
@@ -134,7 +143,7 @@ function QuestionsPart(props) {
                   })}
                   {isAnswerd && (
                     <p className="explain-text explain-mult">
-                      {Text[props.pageNum]["explain-mult"] }
+                      {Text[props.pageNum]["explain-mult"]}
                     </p>
                   )}
                 </div>
@@ -166,14 +175,14 @@ function QuestionsPart(props) {
             </div>
             // <FrueFalseQuestions questionNum={questionNum} rndQuestion={rndQuestion} handleClick={handleClick} />
           )}
-          {isAnswerd && (
+          {isAnswerd && questionCaunter > 1 && (
             <div className=" after-question ">
-              {questionCaunter > 1 && (
+              {/* {questionCaunter > 1 && ( */}
                 <p className="explain-text">
                   {Text[props.pageNum]["explains"][currQuestion]}
                   {/* {Text[props.pageNum]["explains"][currQuestion]} */}
                 </p>
-              )}
+              {/* )} */}
               <div className="btn question-btn" onClick={handleClick}>
                 הבא
               </div>
