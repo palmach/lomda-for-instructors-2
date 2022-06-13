@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 .quote {
   font-size: 8vw;
@@ -23,9 +24,12 @@
 .text-speech {
   text-align: right;
   width: 100%;
-  height: 77%;
+  height: 83%;
   direction: ltr;
   /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .text-side {
@@ -34,6 +38,7 @@
 
 .question-btn {
   margin: 1vh;
+  align-self: flex-end;
 }
 
 .question-headline {

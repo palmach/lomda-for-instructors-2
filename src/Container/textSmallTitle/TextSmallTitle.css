@@ -19,10 +19,11 @@
 }
 
 .next-btn {
-  position: absolute;
+  align-self: flex-start;
+  /*   position: absolute;
   bottom: 1vh;
-  left: 1vh;
-}
+  left: 1vh;*/
+} 
 
 .pic{
     background-size: 100% 100%;
