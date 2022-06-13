@@ -22,7 +22,6 @@
 
 .text-speech {
   text-align: right;
-  overflow-y: auto;
   width: 100%;
   height: 77%;
   direction: ltr;
