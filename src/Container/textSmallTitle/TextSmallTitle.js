@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./TextSmallTitle.css";
 import gsap from "gsap";
 
@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 function TextSmallTitle(props) {
   const navigate = useNavigate();
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     // if (props.statPage < props.pageNum) {
@@ -25,12 +26,16 @@ function TextSmallTitle(props) {
   }, [props.pageNum]);
 
   console.log(props.pageNum);
-  console.log(Text[props.pageNum]["pic"]);
   const handleClick = () => {
     // if (Text[props.pageNum]["next"]==="same") {
     if (props.pageNum === 7) {
       navigate("/principles");
     }
+    console.log(scrollRef.current.offsetTop);
+    scrollRef.current.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     props.changePage();
     // } else {
     //   console.log("helo");
@@ -43,7 +48,12 @@ function TextSmallTitle(props) {
         //   className="instructors-headline"
         content={Text[props.pageNum]["headlin"]}
       />
-      <div className={`text-speech ${props.pageNum === 7 && "big-speech"}`}>
+      <div
+        className={`text-speech make-scroll ${
+          props.pageNum === 7 && "big-speech"
+        }`}
+        ref={scrollRef}
+      >
         <Markup
           //   className="question text-questions"
           content={Text[props.pageNum]["smallHeadline"]}
@@ -55,9 +65,9 @@ function TextSmallTitle(props) {
           className="normal-text qustions"
           content={Text[props.pageNum]["text"]}
         />
-      </div>
-      <div className="btn next-btn" onClick={handleClick}>
-        הבא
+        <div className="btn next-btn" onClick={handleClick}>
+          הבא
+        </div>
       </div>
     </div>
   );

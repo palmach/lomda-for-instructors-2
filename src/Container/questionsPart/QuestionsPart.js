@@ -102,7 +102,7 @@ function QuestionsPart(props) {
           resetPage={props.resetPage}
         />
       ) : (
-        <div className="questions-part">
+        <div className="questions-part make-scroll">
           <h1 className="small-headline question-headline">
             שאלה {questionCaunter}
           </h1>
