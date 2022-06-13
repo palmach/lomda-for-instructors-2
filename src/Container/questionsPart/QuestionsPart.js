@@ -111,7 +111,7 @@ function QuestionsPart(props) {
               // <BottomScrollListener onBottom={handleContainerOnBottom}>
               //   {(scrollRef) => (
               <div
-                className="text-speech normal-text quote"
+                className="text-speech make-scroll normal-text quote"
                 onScroll={onScroll}
                 ref={scrollRef}
               >
