@@ -72,10 +72,6 @@ function QuestionsPart(props) {
   };
   console.log("currQuestion " + currQuestion);
 
-  // const handleContainerOnBottom = () => {
-  //   setIsAnswerd(true);
-  // };
-
   const onScroll = (e) => {
     // setIsAnswerd(true);
     // console.log("bip1");
@@ -102,14 +98,12 @@ function QuestionsPart(props) {
           resetPage={props.resetPage}
         />
       ) : (
-        <div className="questions-part make-scroll">
+        <div className="questions-part ">
           <h1 className="small-headline question-headline">
             שאלה {questionCaunter}
           </h1>
           {questionCaunter === 1 ? (
             clickCaunter === 0 ? (
-              // <BottomScrollListener onBottom={handleContainerOnBottom}>
-              //   {(scrollRef) => (
               <div
                 className="text-speech make-scroll normal-text quote"
                 onScroll={onScroll}
@@ -124,8 +118,6 @@ function QuestionsPart(props) {
                 </div>
               </div>
             ) : (
-              //   )}
-              // </BottomScrollListener>
               clickCaunter === 1 && (
                 <div className="questions-part">
                   <h1 className="question-text">
