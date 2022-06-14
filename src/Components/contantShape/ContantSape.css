@@ -1,0 +1,78 @@
+.bible-part {
+  fill: #413c58;
+  fill: #93b5a6;
+  fill: #b2dba3;
+  fill: #6c8bd3;
+  fill: #6592ba;
+  /* fill: #396398; */
+  
+      fill: #413c58;
+
+      fill: #32b8c1;
+   /*  fill: #396398; 
+    fill: #93b5a6;
+    fill: #b2dba3;
+    fill: #fe9000;
+    fill: #d04e50; */
+}
+.circle-part {
+    fill: #a3c4bc;
+    fill: #7ba3cb;
+    fill: #79acab;
+    fill: #76a9d9;
+
+    fill: #007e87;
+   /*      fill: #7ba3cb;
+    fill: #3c6997;
+    fill: #eb805a;
+    /* fill: #ffdd4a; */
+}
+.events-part {
+  fill: #bfd7b5;
+  fill: #8abac3;
+  fill: #82b99f;
+  fill: #82c4cd;
+
+  fill: #aaebef;
+  fill: #0f9aa3;
+
+
+  /*     fill: #bfd7b5;
+    fill: #8abac3;
+    fill: #067bc2;
+    fill: #094074; */
+}
+.contact-part {
+  fill: #e7efc5;
+  fill: #98d2ba;
+  fill: #8cc696;
+  fill: #6291c5;
+
+  fill: #68c5cb;
+
+  /*     fill: #e7efc5;
+    fill: #98d2ba;
+    fill: #ecc30b;
+    /* fill: #3c6997; */
+}
+.shabat-part {
+  fill: #f2dda4;
+  fill: #a7e9b2;
+  fill: #6f9fb1;
+  fill: #86c8e9;
+  
+  fill: #bce8eb;
+  fill: #6acdff;
+
+  /*     fill: #f2dda4;
+    fill: #a7e9b2;
+    fill: #f36f3f;
+    fill: #22aad7;
+    /* fill: #84bcda; */
+}
+.logo-text {
+  fill: #55546b;
+  /* fill: #fdfefe; */
+  fill: #ffffff;
+  fill: #f6ffff;
+}

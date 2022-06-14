@@ -7,6 +7,7 @@ import TextNoSmallTitle from "./Container/textNoSmallTitle/TextNoSmallTitle";
 import QuestionsPart from "./Container/questionsPart/QuestionsPart";
 import TextSmallTitle from "./Container/textSmallTitle/TextSmallTitle";
 import PrinciplesPart from "./Container/principlesPart/PrinciplesPart";
+import ContantPart from "./Container/contantPart/ContantPart";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -55,6 +56,15 @@ function App() {
               path="/principles"
               element={
                 <PrinciplesPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={8} resetPage={resetPage} />
+
+                // <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
+              }
+            ></Route>
+            <Route
+              exact
+              path="/contant"
+              element={
+                <ContantPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={8} resetPage={resetPage} />
 
                 // <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
               }
