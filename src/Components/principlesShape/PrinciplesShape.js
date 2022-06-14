@@ -7,7 +7,7 @@ import gsap from "gsap";
 import Text from "./../../Text.json";
 
 function PrinciplesShape(props) {
-  const colorRef = useRef();
+  // const colorRef = useRef();
 
   return (
     <div

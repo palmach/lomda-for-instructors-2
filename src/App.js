@@ -64,7 +64,7 @@ function App() {
               exact
               path="/contant"
               element={
-                <ContantPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={8} resetPage={resetPage} />
+                <ContantPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={9} resetPage={resetPage} />
 
                 // <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
               }
