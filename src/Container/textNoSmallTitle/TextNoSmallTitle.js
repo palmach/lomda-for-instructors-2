@@ -28,10 +28,11 @@ function TextNoSmallTitle(props) {
      
         {/* <div className="page"> */}
           {Text[props.pageNum]["pic"] === "y" && (
-            <div className="sound-icon margin-logo">
+            // <div className="sound-icon margin-logo">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 103.85 74.46"
+                className="sound-icon margin-logo"
               >
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Layer_1-2" data-name="Layer 1">
@@ -50,7 +51,7 @@ function TextNoSmallTitle(props) {
                   </g>
                 </g>
               </svg>
-            </div>
+            // </div>
           )}
           <Markup
             //   className="question text-questions"

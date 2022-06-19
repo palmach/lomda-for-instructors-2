@@ -1,0 +1,13 @@
+.principles-part{
+    justify-content: space-evenly;
+}
+.principle-headline{
+    font-size: 10vmin;
+    margin-bottom: 0vh;
+}
+
+.different-color {
+    margin: 0vh;
+    width: 100%;
+    /* color: #3163aa; */
+}
