@@ -23,3 +23,7 @@
 .white-text {
   fill: #fff;
 }
+
+.blured-color{
+  filter: saturate(0.5) ;
+}

@@ -131,3 +131,11 @@ html {
 /* .star{
   font-size: 1vmin;
 } */
+
+.numbers{
+  padding: 2vmin 5vmin;
+  /* width: 3vw; */
+  margin: 2.5vw;
+  background-color: white;
+  border-radius: 50%;
+}

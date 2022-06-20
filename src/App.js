@@ -12,7 +12,7 @@ import ContantPart from "./Container/contantPart/ContantPart";
 function App() {
   const [pageNum, setPageNum] = useState(0);
 
-  const createRndNum= (rndQuestion)=>{
+  const createRndNum = (rndQuestion) => {
     rndQuestion.push(Math.floor(Math.random() * (5 - 0 + 1)) + 0);
     let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
     while (rndQuestion[0] === num) {
@@ -20,8 +20,8 @@ function App() {
     }
     rndQuestion.push(num);
     // console.log(rndQuestion);
-    return (rndQuestion)
-  }
+    return rndQuestion;
+  };
 
   const changePage = () => {
     setPageNum((prev) => prev + 1);
@@ -36,37 +36,71 @@ function App() {
       <div className="glass">
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<FirstPage changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={0} resetPage={resetPage} />} />
+            <Route
+              exact
+              path="/"
+              element={
+                <FirstPage
+                  changePage={changePage}
+                  pageNum={pageNum}
+                  setPageNum={setPageNum}
+                  statPage={0}
+                  resetPage={resetPage}
+                />
+              }
+            />
             <Route
               exact
               path="/questions"
               element={
-                <QuestionsPart createRndNum={createRndNum} changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={2} resetPage={resetPage} />
+                <QuestionsPart
+                  createRndNum={createRndNum}
+                  changePage={changePage}
+                  pageNum={pageNum}
+                  setPageNum={setPageNum}
+                  statPage={2}
+                  resetPage={resetPage}
+                />
               }
             ></Route>
             <Route
               exact
               path="/dear-instructors"
               element={
-                <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
+                <TextSmallTitle
+                  changePage={changePage}
+                  pageNum={pageNum}
+                  setPageNum={setPageNum}
+                  statPage={4}
+                  resetPage={resetPage}
+                />
               }
             ></Route>
             <Route
               exact
               path="/principles"
               element={
-                <PrinciplesPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={8} resetPage={resetPage} />
-
-                // <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
+                <PrinciplesPart
+                  changePage={changePage}
+                  pageNum={pageNum}
+                  setPageNum={setPageNum}
+                  statPage={8}
+                  resetPage={resetPage}
+                />
               }
             ></Route>
             <Route
               exact
               path="/contant"
               element={
+                // <PrinciplesPart
+                //   changePage={changePage}
+                //   pageNum={pageNum}
+                //   setPageNum={setPageNum}
+                //   statPage={9}
+                //   resetPage={resetPage}
+                // />
                 <ContantPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={9} resetPage={resetPage} />
-
-                // <TextSmallTitle changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={4} resetPage={resetPage} />
               }
             ></Route>
             <Route
