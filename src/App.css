@@ -41,6 +41,12 @@
   background-color: #302adb6b;
 }
 
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
 .App {
   /* text-align: center; */
   width: 100%;
@@ -73,11 +79,6 @@
   margin: 2vh;
 }
 
-body,
-html {
-  width: 100vw;
-  height: 100vh;
-}
 
 .normal-text {
   font-family: textFont;
@@ -128,14 +129,25 @@ html {
   text-align: center;
 }
 
-/* .star{
-  font-size: 1vmin;
-} */
-
 .numbers{
   padding: 2vmin 5vmin;
   /* width: 3vw; */
   margin: 2.5vw;
   background-color: white;
   border-radius: 50%;
+}
+
+.pics-headline{
+  font-size: 12vmin;
+}
+
+.pic-text{
+  font-size: 8vmin;
+  font-family: textFont;
+
+}
+
+.pic-text,
+.instructors-text {
+  text-align: right;
 }

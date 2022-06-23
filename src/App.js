@@ -8,6 +8,7 @@ import QuestionsPart from "./Container/questionsPart/QuestionsPart";
 import TextSmallTitle from "./Container/textSmallTitle/TextSmallTitle";
 import PrinciplesPart from "./Container/principlesPart/PrinciplesPart";
 import ContantPart from "./Container/contantPart/ContantPart";
+import EndPart from "./Container/endPart/EndPart";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -102,11 +103,13 @@ function App() {
                 // />
                 <ContantPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={9} resetPage={resetPage} />
               }
-            ></Route>
+              ></Route>
             <Route
               exact
               path="/end"
-              // element={<LastPage pageNum={pageNum} setPageNum={setPageNum} />}
+              element={
+                <EndPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={10} resetPage={resetPage} />
+              }
             ></Route>
           </Routes>
         </BrowserRouter>

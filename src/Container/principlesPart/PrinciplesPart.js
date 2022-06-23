@@ -54,7 +54,7 @@ function PrinciplesPart(props) {
   return (
     <div className=" page">
       {isMoving ? (
-        <div className={`page `}>
+        <div className="page big-text-cont" >
           <Markup
             content={Text[props.pageNum]["texts"][moveToPart]["headline"]}
           />

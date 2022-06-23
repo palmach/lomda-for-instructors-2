@@ -3,7 +3,6 @@
 }
 
 .instructors-text {
-  text-align: right;
   font-size: 4.5vh;
 }
 
@@ -63,7 +62,7 @@
 }
 
  .star{
-    font-size: 5vmin;
+    font-size: 6vmin;
 }
 
 .delay,

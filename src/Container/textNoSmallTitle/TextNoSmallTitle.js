@@ -58,7 +58,7 @@ function TextNoSmallTitle(props) {
             content={Text[props.pageNum]["headlin"]}
           />
           <Markup
-            //   className="question text-questions"
+              className="normal-text"
             content={Text[props.pageNum]["text"]}
           />
           <div className="btn start-btn" onClick={clickStart}>

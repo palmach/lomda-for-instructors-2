@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import "./QuestionsPart.css";
 import { useNavigate } from "react-router-dom";
-import FrueFalseQuestions from "./../../Components/trueFalseQuestions/FrueFalseQuestions";
+import FrueFalseQuestions from "../endPart/EndPart";
 import gsap from "gsap";
 import Answers from "../../Components/answers/Answers";
 import TextNoSmallTitle from "../textNoSmallTitle/TextNoSmallTitle";
@@ -106,7 +106,7 @@ function QuestionsPart(props) {
             clickCaunter === 0 ? (
               <div
                 className="text-speech make-scroll normal-text quote"
-                onScroll={onScroll}
+                // onScroll={onScroll}
                 ref={scrollRef}
               >
                 <Markup
