@@ -57,6 +57,28 @@ html {
   justify-content: center;
   direction: rtl;
   overflow: hidden;
+  background: linear-gradient(
+    137deg,
+    rgba(228, 243, 253, 1) 0%,
+    rgba(224, 241, 252, 1) 21%,
+    rgba(74, 179, 216, 1) 100%
+  );
+  background-size: 100% 100%;
+}
+
+.glass {
+  width: 88%;
+  height: 94%;
+  position: absolute;
+  background: linear-gradient(
+    137deg,
+    rgb(227 242 253 / 31%) 0%,
+    rgb(223 240 252 / 31%) 14%,
+    rgb(107 193 224 / 31%) 100%
+  );
+  border-radius: 16px;
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
 }
 
 .big-headline {

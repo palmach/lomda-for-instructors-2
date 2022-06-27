@@ -8,13 +8,13 @@
   /* top: -16%;
     left: -56%; */
   /* background: rgb(228,243,253); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     137deg,
     rgba(228, 243, 253, 1) 0%,
     rgba(224, 241, 252, 1) 21%,
     rgba(74, 179, 216, 1) 100%
   );
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
 }
 .background-bals {
   position: absolute;
@@ -71,23 +71,17 @@
     }
   }
 
-.glass {
+/* .glass {
   width: 88%;
   height: 94%;
   position: absolute;
-  /* background: rgba(255, 255, 255, 0.25); */
-  /* background: linear-gradient(
-    137deg,
-    rgba(227, 242, 253, 0.31) 0%,
-    rgba(111, 195, 225, 0.31) 100%
-  ); */
   background: linear-gradient(
     137deg,
     rgb(227 242 253 / 31%) 0%,
     rgb(223 240 252 / 31%) 14%,
     rgb(107 193 224 / 31%) 100%
-  ); /* linear-gradient(137deg, rgb(227 242 253) 0%, rgb(119 198 227) 100%) */
+  );
   border-radius: 16px;
   backdrop-filter: blur(4.1px);
   -webkit-backdrop-filter: blur(4.1px);
-}
+} */
