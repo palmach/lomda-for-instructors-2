@@ -26,4 +26,5 @@
 
 .blured-color{
   filter: saturate(0.5) ;
+  opacity: 0.5;
 }

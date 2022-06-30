@@ -30,12 +30,15 @@ function EndPart(props) {
         <div>
           <p className=' small-margin pic-text text-side bold-text centerd'>מודרך יקר, הגעת לתום התדרוך</p>
           <p className=' small-margin pic-text text-side bold-text centerd'>לסיום התהליך אנא לחצו כאן למילוי מבחן הבקיאות.</p>
+          <a href="https://forms.gle/uuvvhd4SvKYa3PFM9" target="_blank" rel="noreferrer">
           <div
             className="btn start-btn"
             //להוסיף שבלחיצה עובר לקישור של המבחן
             >
             למבחן
           </div>
+
+          </a>
             <p className=' small-margin pic-text text-side bold-text centerd'>תודה על שיתוף הפעולה!</p>
             <p className=' small-margin pic-text text-side bold-text centerd'>במידה וקיימים פערים, אנא פנו לאיש קשר שהפנה אתכם.</p>
           <div
