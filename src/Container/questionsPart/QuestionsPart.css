@@ -79,3 +79,23 @@
 .make-scroll{
   overflow-y: auto;
 }
+
+.try-again{
+  animation: apper 1.5s  linear ;
+
+}
+
+@keyframes apper {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

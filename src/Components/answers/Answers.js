@@ -20,9 +20,22 @@ function Answers(props) {
         gsap.to(colorRef.current, { backgroundColor: "#3cce4a" });
       } else {
         gsap.to(colorRef.current, { backgroundColor: "#e83442" });
+        props.setIsCorrect(true);
+
       }
     }
   };
+
+  useEffect(() => {
+    if(props.isCorrect===true){
+
+      const timer = setTimeout(() => {
+        props.setIsCorrect(false);
+
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [props.isCorrect]);
 
   return (
     <div

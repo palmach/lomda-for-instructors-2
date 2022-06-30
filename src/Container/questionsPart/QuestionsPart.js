@@ -1,54 +1,44 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  useMemo,
-} from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "./QuestionsPart.css";
 import { useNavigate } from "react-router-dom";
-import FrueFalseQuestions from "../endPart/EndPart";
 import gsap from "gsap";
 import Answers from "../../Components/answers/Answers";
 import TextNoSmallTitle from "../textNoSmallTitle/TextNoSmallTitle";
-// import { BottomScrollListener } from "react-bottom-scroll-listener";
 
 import { Markup } from "interweave";
 import Text from "./../../Text.json";
 
 function QuestionsPart(props) {
-  const [questionNum, setQuestionNum] = useState(0);
   const [questionCaunter, setQuestionCaunter] = useState(1);
-
   const [rndQuestion, setRndQuestion] = useState([]);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [clickCaunter, setClickCaunter] = useState(0);
   const [isAnswerd, setIsAnswerd] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   const questions = useMemo(() => {
     setRndQuestion(props.createRndNum(rndQuestion));
   }, [rndQuestion]);
 
-  const scrollRef = useRef();
-
   const navigate = useNavigate();
 
-  console.log(rndQuestion);
-
   useEffect(() => {
-    // if (props.statPage < props.pageNum || props.pageNum === 0) {
+    //restart the page counter
     props.resetPage(props.statPage);
     setCurrQuestion(0);
-    console.log(rndQuestion);
   }, []);
 
   useEffect(() => {
+    //when a question is changed make botton colors and next button disapper
     setIsAnswerd(false);
   }, [questionCaunter]);
 
   useEffect(() => {
+    // if changed from mult question to yes/no questions set the counter and the current question num
     if (clickCaunter === 2) {
+      console.log("09898");
       setQuestionCaunter((prev) => prev + 1);
+      setCurrQuestion(rndQuestion[questionCaunter - 1]);
     }
   }, [clickCaunter]);
 
@@ -57,13 +47,12 @@ function QuestionsPart(props) {
     if (questionCaunter <= 2) {
       if (isAnswerd) {
         if (clickCaunter > 1) {
-          console.log("from if");
           setIsAnswerd(false);
           setQuestionCaunter((prev) => prev + 1);
+
           setCurrQuestion(rndQuestion[questionCaunter - 1]);
-        } else if (clickCaunter === 1){
+        } else if (clickCaunter === 1) {
           setIsAnswerd(true);
-          console.log("from else");
         }
       }
     } else {
@@ -71,26 +60,13 @@ function QuestionsPart(props) {
     }
   };
   console.log("currQuestion " + currQuestion);
-
-  const onScroll = (e) => {
-    // setIsAnswerd(true);
-    // console.log("bip1");
-    // }
-    // if (scrollRef.current) {
-    //   const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
-    //   console.log(" scrollHeight-scrollTop "+ (scrollHeight-scrollTop));
-    //   console.log("scrollHeight " + scrollHeight);
-    //   if (clientHeight === scrollHeight-scrollTop) {
-    //     console.log("bip");
-    //     setIsAnswerd(true);
-    //   }
-    // }
-  };
+  console.log("isCorrect " + isCorrect);
 
   return (
     <div className="questions-part">
       {props.pageNum === 2 ? (
         <TextNoSmallTitle
+          //sand to explain about questions
           changePage={props.changePage}
           pageNum={props.pageNum}
           setPageNum={props.setPageNum}
@@ -104,11 +80,8 @@ function QuestionsPart(props) {
           </h1>
           {questionCaunter === 1 ? (
             clickCaunter === 0 ? (
-              <div
-                className="text-speech make-scroll normal-text quote"
-                // onScroll={onScroll}
-                ref={scrollRef}
-              >
+              //quote part in question 1
+              <div className="text-speech make-scroll normal-text quote">
                 <Markup
                   className="text-speech normal-text quote"
                   content={Text[props.pageNum]["speech"]}
@@ -124,6 +97,7 @@ function QuestionsPart(props) {
                     {Text[props.pageNum]["mult-question"]}
                   </h1>
                   {Text[props.pageNum]["mult-answers"].map((ans, index) => {
+                    //create multipul questions
                     return (
                       <Answers
                         ansNum={index}
@@ -133,14 +107,19 @@ function QuestionsPart(props) {
                         setIsAnswerd={setIsAnswerd}
                         isAnswerd={isAnswerd}
                         answerClass="multi-ans"
+                        isCorrect={isCorrect}
+                        setIsCorrect={setIsCorrect}
                       />
                     );
                   })}
-                  {isAnswerd && (
-                    <p className="explain-text explain-mult">
-                      {Text[props.pageNum]["explain-mult"]}
-                    </p>
-                  )}
+                  <p className={`explain-text explain-mult ${isCorrect &&"try-again"}`}>
+                    {isCorrect &&
+                      //if is answerd wrong the try again text will show
+                      "נסה שוב"}
+                    {isAnswerd &&
+                      //if is answerd corrct the try again text will show
+                      Text[props.pageNum]["explain-mult"]}
+                  </p>
                 </div>
               )
             )
@@ -151,12 +130,15 @@ function QuestionsPart(props) {
               </h1>
               <div className="true-false-cont">
                 <Answers
+                  //create right and wrong buttons
                   ansNum={1}
                   cont={"נכון"}
                   corectAns={Text[props.pageNum]["y-n-answers"][currQuestion]}
                   setIsAnswerd={setIsAnswerd}
                   isAnswerd={isAnswerd}
                   answerClass="true-false"
+                  isCorrect={isCorrect}
+                  setIsCorrect={setIsCorrect}
                 />
                 <Answers
                   ansNum={0}
@@ -165,21 +147,24 @@ function QuestionsPart(props) {
                   setIsAnswerd={setIsAnswerd}
                   isAnswerd={isAnswerd}
                   answerClass="true-false"
+                  isCorrect={isCorrect}
+                  setIsCorrect={setIsCorrect}
                 />
               </div>
             </div>
-            // <FrueFalseQuestions questionNum={questionNum} rndQuestion={rndQuestion} handleClick={handleClick} />
           )}
-          {isAnswerd &&
-          //  questionCaunter >= 1 &&
-            (
+          {isAnswerd && (
             <div className=" after-question ">
               {questionCaunter > 1 && (
-                <p className="explain-text">
-                  {Text[props.pageNum]["explains"][currQuestion]}
-                  {/* {Text[props.pageNum]["explains"][currQuestion]} */}
+                <p className={`explain-text explain-mult ${isCorrect &&"try-again"}`}>
+                  {isCorrect &&
+                    //if is answerd wrong the try again text will show
+                    "נסה שוב"}
+                  {isAnswerd &&
+                    //if is answerd corrct the try again text will show
+                    Text[props.pageNum]["explains"][currQuestion]}
                 </p>
-               )} 
+              )}
               <div className="btn question-btn" onClick={handleClick}>
                 הבא
               </div>
