@@ -13,11 +13,14 @@ function Answers(props) {
   }, [props.isAnswerd]);
 
   const answerQuestion = () => {
-    if (props.ansNum === Number(props.corectAns)) {
-      props.setIsAnswerd(true);
-      gsap.to(colorRef.current, { backgroundColor: "#3cce4a" });
-    } else {
-      gsap.to(colorRef.current, { backgroundColor: "#e83442" });
+    if(!props.isAnswerd){
+
+      if (props.ansNum === Number(props.corectAns)) {
+        props.setIsAnswerd(true);
+        gsap.to(colorRef.current, { backgroundColor: "#3cce4a" });
+      } else {
+        gsap.to(colorRef.current, { backgroundColor: "#e83442" });
+      }
     }
   };
 

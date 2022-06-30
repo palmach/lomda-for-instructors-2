@@ -64,6 +64,8 @@ html {
     rgba(74, 179, 216, 1) 100%
   );
   background-size: 100% 100%;
+  margin: 0%;
+  padding: 0%;
 }
 
 .glass {
@@ -147,9 +149,6 @@ html {
   /* margin-top: 12vh; */
 }
 
-.centerd{
-  text-align: center;
-}
 
 .numbers{
   padding: 2vmin 5vmin;
@@ -172,4 +171,8 @@ html {
 .pic-text,
 .instructors-text {
   text-align: right;
+}
+
+.centerd{
+  text-align: center;
 }
