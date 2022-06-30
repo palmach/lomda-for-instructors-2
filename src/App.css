@@ -46,16 +46,16 @@ body, html {
   height: 100vh;
   margin: 0%;
   padding: 0%;
+  overflow: hidden;
 }
 
 .App {
   /* text-align: center; */
-  width: 100vmin;
+  width: 100vw;
   height: 100vh;
   /* position: absolute; */
   display: flex;
   direction: rtl;
-  overflow: hidden;
   background: linear-gradient( 137deg, rgba(228, 243, 253, 1) 0%, rgba(224, 241, 252, 1) 21%, rgba(74, 179, 216, 1) 100% );
   background-size: 100% 100%;
   margin: 0%;
@@ -65,7 +65,7 @@ body, html {
 }
 
 .glass {
-  width: 89%;
+  width: 88%;
   height: 94%;
   position: absolute;
   /* top: 0vh; */
