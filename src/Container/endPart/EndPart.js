@@ -27,8 +27,8 @@ function EndPart(props) {
           </div>
         </div>
       ) : (
-        <div>
-          <p className=' small-margin pic-text text-side bold-text centerd'>מודרך יקר, הגעת לתום התדרוך</p>
+        <div className="test-page"> 
+          <p className=' small-margin pic-text text-side bold-text centerd'>מודרך יקר, הגעת לתום התדרוך!</p>
           <p className=' small-margin pic-text text-side bold-text centerd'>לסיום התהליך אנא לחצו כאן למילוי מבחן הבקיאות.</p>
           <a href="https://forms.gle/uuvvhd4SvKYa3PFM9" target="_blank" rel="noreferrer">
           <div

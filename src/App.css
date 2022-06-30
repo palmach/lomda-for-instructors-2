@@ -41,6 +41,8 @@
   background-color: #302adb6b;
 }
 
+a:link { text-decoration: none; }
+
 body, html {
   width: 100vw;
   height: 100vh;
@@ -153,6 +155,8 @@ body, html {
   margin: 2.5vw;
   background-color: white;
   border-radius: 50%;
+  font-weight: 100;
+
 }
 
 .pics-headline{
