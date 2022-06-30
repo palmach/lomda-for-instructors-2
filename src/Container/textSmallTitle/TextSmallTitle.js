@@ -18,7 +18,7 @@ function TextSmallTitle(props) {
 
   useEffect(() => {
     if (props.pageNum === 6) {
-      gsap.to(".small-spirit-pic", { duration: 0.75, opacity: 1, delay: 0.75 });
+      gsap.to(".small-spirit-pic", { duration: 0.75, opacity: 1, delay: 1 });
     }
     if (props.pageNum === 7) {
       gsap.to(".delay", { duration: 0.75, opacity: 1, delay: 0.75 });

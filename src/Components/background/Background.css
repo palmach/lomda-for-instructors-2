@@ -1,21 +1,9 @@
 .background {
-  position: absolute;
+  /* position: absolute; */
   height: 100%;
   width: 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* top: -16%;
-    left: -56%; */
-  /* background: rgb(228,243,253); */
-  /* background: linear-gradient(
-    137deg,
-    rgba(228, 243, 253, 1) 0%,
-    rgba(224, 241, 252, 1) 21%,
-    rgba(74, 179, 216, 1) 100%
-  );
-  background-size: 100% 100%; */
 }
+
 .background-bals {
   position: absolute;
   height: 141%;
